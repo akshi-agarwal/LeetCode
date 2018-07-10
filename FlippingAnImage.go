@@ -31,4 +31,4 @@ func flipAndInvertImage(A [][]int) [][]int {
 	return A
 }
 
-Time: O(n^2)
+//Time: O(n^2)
