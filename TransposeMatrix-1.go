@@ -5,10 +5,13 @@
 // Output: [[1,4,7],[2,5,8],[3,6,9]]
 
 func transpose(A [][]int) [][]int {
+	//initializing array for transpose matrix
 	arr := make([][]int, len(A[0]))
 	for i := range arr {
 		arr[i] = make([]int, len(A))
 	}
+	
+	//transposing the matrix. Column -> Row, Row -> Column
 	for i := 0; i < len(A); i++ {
 		for j := 0; j < len(A[0]); j++ {
 			arr[j][i] = A[i][j]
