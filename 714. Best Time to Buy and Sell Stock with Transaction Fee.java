@@ -13,3 +13,19 @@
 // Buying at prices[4] = 4
 // Selling at prices[5] = 9
 // The total profit is ((8 - 1) - 2) + ((9 - 4) - 2) = 8.
+
+	public static int maxProfit(int[] A, int fee) {
+	int i = 0; int total = 0; int j = 0;
+	while (i < A.length - 1 && j < A.length) {
+		if(A[i] == A[j] || (A[j]-A[i]-2) <= 0 || A[j] < A[j+1]) {
+			j++;
+		}
+		else if(A[i] > A[j]) {
+			i=j;
+		}
+		else if(A[i] < A[j]) {
+			total = total + (A[j] - A[i]) - fee;
+		}
+	}
+	return total;
+}
