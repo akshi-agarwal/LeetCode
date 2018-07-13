@@ -22,5 +22,5 @@ func flipAndInvertImage(A [][]int) [][]int {
 	return A
 }
 
-//Time: O(n)
+//Time: O(n^2)
 //Here n is the number of elements. No element gets iterated over twice.
