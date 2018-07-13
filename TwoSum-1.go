@@ -18,5 +18,5 @@ func twoSum(nums []int, target int) []int {
 }
 
 
-// Time:     O(n)
+// Time:     O(n^2)
 // Space:    O(1)
