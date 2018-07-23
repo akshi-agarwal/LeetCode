@@ -20,14 +20,11 @@ func romanToInt(s string) int {
 	add := 0
 	
     for i := 0; i < len(s); i++ {
-
-		fmt.Printf("Entered Loop: add: %v\n\n\n", add)
 			if i + 1 < len(s) && s[i] == 'I' && s[i+1] == 'V' {
-				fmt.Printf("Entered I V\n\n")
 				add += 4
 				i += 1
 			} else if i + 1 < len(s) && s[i] == 'I' && s[i+1] == 'X' {
-				add =+ 9
+				add += 9
 				i += 1
 			} else if i + 1 < len(s) && s[i] == 'X' && s[i+1] == 'L' {
 				add += 40
@@ -46,17 +43,14 @@ func romanToInt(s string) int {
 			} else if s[i] == 'V' {
 				add += 5
 			} else if s[i] == 'X' {
-				fmt.Printf("Entered X\n\n")
 				add += 10
 			} else if s[i] == 'L' {
 				add += 50
 			} else if s[i] == 'C' {
-				fmt.Printf("Entered C\n\n")
 				add += 100
 			} else if s[i] == 'D' {
 				add += 500
 			} else if s[i] == 'M' {
-				fmt.Printf("Entered M\n\n")
 				add += 1000
 			}
     }
